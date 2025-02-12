@@ -1,0 +1,184 @@
+/* RESET & BASE STYLES */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 20px;
+    background-color: #f7f7f7;
+}
+
+h1 {
+    margin-bottom: 1.5rem;
+    color: #333;
+    font-size: 1.8rem;
+}
+
+/* MAIN CONTAINER */
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    background: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* ACTION ROW */
+.action-row {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+/* DOWNLOAD ALL BUTTON */
+#downloadAllBtn {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1rem;
+    display: none;
+    transition: background-color 0.3s;
+}
+
+#downloadAllBtn:hover {
+    background-color: #0056b3;
+}
+
+/* DROP ZONE */
+#drop-zone {
+    border: 2px dashed #ccc;
+    padding: 30px;
+    margin: 1.5rem 0;
+    cursor: pointer;
+    transition: border-color 0.3s;
+    border-radius: 8px;
+    background-color: #fafafa;
+}
+
+#drop-zone.highlight {
+    border-color: #007bff;
+}
+
+#fileInput {
+    display: none;
+}
+
+/* PROGRESS BAR */
+#progressContainer {
+    margin-top: 20px;
+    transition: opacity 0.5s ease-out;
+    display: none;
+}
+
+#progressBar {
+    width: 100%;
+    height: 20px;
+}
+
+.fade-out {
+    opacity: 0;
+}
+
+/* TABLE WRAPPER */
+.table-wrapper {
+    width: 100%;
+    margin-top: 20px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    overflow-x: auto;
+}
+
+/* FILES TABLE */
+#filesTable {
+    table-layout: fixed;
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 600px;
+}
+
+#filesTable th,
+#filesTable td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    font-size: 0.9rem;
+    text-align: left;
+}
+
+#filesTable th {
+    background-color: #f2f2f2;
+}
+
+#filesTable tr:hover {
+    background-color: #f9f9f9;
+}
+
+#filesTable th:nth-child(1),
+#filesTable td:nth-child(1) {
+    width: 60%;
+}
+
+.path-wrapper {
+    display: block;
+    max-width: 100%;
+    overflow-x: scroll;
+    white-space: nowrap;
+}
+
+#filesTable th:nth-child(2),
+#filesTable td:nth-child(2),
+#filesTable th:nth-child(3),
+#filesTable td:nth-child(3) {
+    width: 20%;
+    text-align: center;
+}
+
+/* SCROLLBAR STYLES (WebKit) */
+.path-wrapper::-webkit-scrollbar {
+    height: 8px;
+}
+
+.path-wrapper::-webkit-scrollbar-track {
+    background: #f2f2f2;
+}
+
+.path-wrapper::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 4px;
+}
+
+.path-wrapper::-webkit-scrollbar-thumb:hover {
+    background: #999;
+}
+
+/* FOOTER */
+footer {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 600px) {
+    .action-row {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    #downloadAllBtn {
+        margin-bottom: 1rem;
+    }
+
+    #drop-zone {
+        width: 100% !important;
+    }
+}

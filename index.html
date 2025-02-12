@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>UnityPackage Extractor</title>
+
+    <link rel="stylesheet" href="style.css" />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pako/2.1.0/pako.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/js-untar@2.0.0/build/dist/untar.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js" defer></script>
+    <script src="upe.js" defer></script>
+</head>
+
+<body>
+    <h1>UnityPackage Extractor</h1>
+    <div class="container">
+        <div class="action-row">
+            <button id="downloadAllBtn">Download All as ZIP</button>
+        </div>
+
+        <div id="drop-zone">Drag &amp; Drop .unitypackage here or Click to Upload</div>
+        <input type="file" id="fileInput" accept=".unitypackage" />
+
+        <div id="progressContainer">
+            <progress id="progressBar" value="0" max="100"></progress>
+            <span id="progressText">0%</span>
+        </div>
+
+        <div class="table-wrapper">
+            <div id="filesContainer"></div>
+        </div>
+    </div>
+
+    <footer>
+        Disclaimer: All processing is done locally in your browser. Files are not stored or transmitted.
+    </footer>
+</body>
+
+</html>
